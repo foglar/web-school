@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&Overpass:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+@import 'layout/navigation.css';
+@import 'layout/footer.css';
+
+@import 'utils/utils.css';
+
+@import 'pages/home.css';

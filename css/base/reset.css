@@ -1,0 +1,37 @@
+:root {
+  --fontPrimary: 'Ubuntu', sans-serif;
+  --fontSecondary: 'Comfortaa', cursive;
+  --fontParagraph: 'Overpass', sans-serif;
+  --weightHeader: 700;
+  --weightMiddle: 500;
+  --weightNormal: 400;
+  --fontItalic: italic;
+
+  --primaryColor: #5978FF;
+  --secondaryColor: #E84F00;
+  --tertiaryColor: #00A170;
+
+  --black: #1d1d1d;
+  --white: #ffffff;
+
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+nav {
+  width: calc(1/4 * 100vw);
+}
+
+main {
+  width: calc(3/4 * 100vw);
+}
+
+main>section{
+  margin-top: 2rem;
+}

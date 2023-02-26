@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages/quiz.css" />
+    <script>
+
+
+      function checkAnsw() {
+        var q1 = document.getElementById("q1");
+        var q2 = document.getElementById("q2");
+        var q3 = document.getElementById("q3");
+        var form = document.getElementById("form-quiz");
+        var againBtn = document.getElementById("try-again");
+
+        form.style.display = "none";
+        againBtn.style.display = "block";
+
+        var score = 0;
+        if (q1.checked == true) {
+          score++;
+        }
+        if (q2.checked == true) {
+          score++;
+        }
+        if (q3.checked == true) {
+          score++;
+        }
+
+        const app = document.getElementById("answer");
+        const app_title = document.getElementById("answer-title");
+        const change_app_text = (text) => (app.innerText = text);
+        const change_app_title = (text) => (app_title.innerText = text);
+        if (score == 3) {
+          change_app_title("You are a genius!");
+          change_app_text("1");
+        } else if (score == 2) {
+          change_app_title("You are a genius!");
+          change_app_text("2");
+        } else if (score == 1) {
+          change_app_title("You are a genius!");
+          change_app_text("3");
+        } else {
+          change_app_title("You are a genius!");
+          change_app_text("4");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="main-quiz">
+      <form id="form-quiz" method="post">
+        <fieldset>
+          <h1 class="magic-title">Question1w</h1>
+          <label for="q1Y">Yes</label>
+          <input type="radio" id="q1" name="q1" value="1" required />
+          <label for="q1">No</label>
+          <input name="q1" type="radio" value="0" />
+        </fieldset>
+        <fieldset>
+          <h1 class="magic-title" >Question2</h1>
+          <label for="q1Y">Yes</label>
+          <input type="radio" id="q2" name="q2" value="1" required />
+          <label for="q1">No</label>
+          <input name="q2" type="radio" value="0" />
+        </fieldset>
+        <fieldset>
+          <h1 class="magic-title">Question3</h1>
+          <label for="q1Y">Yes</label
+          ><input type="radio" id="q3" name="q3" value="1" required />
+          <label for="q1">No</label>
+          <input name="q3" type="radio" value="0" />
+        </fieldset>
+        <input type="button" value="Submit" onclick="checkAnsw()" />
+      </form>
+      <div>
+        <h2 id="answer-title" class="magic-title" ></h2>
+        <p id="answer"></p>
+        <input id="try-again" type="button" value="Try again" onclick="window.location.reload()" />
+      </div>
+    </main>
+  </body>
+</html>

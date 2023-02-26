@@ -1,0 +1,66 @@
+.main-quiz {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 800px;
+  padding: 0 1em;
+}
+
+h1 {
+  font-family: var(--fontHeading);
+  color: var(--tertiaryColor);
+  margin: 1em 0;
+}
+
+fieldset {
+  border: none;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.magic-title {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--tertiaryColor)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+label {
+  font-family: var(--fontParagraph);
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  margin: 0 0.5em;
+}
+
+input[type="radio"] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+input[type="button"] {
+  font-family: var(--fontParagraph);
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  margin-left: 2rem;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--tertiaryColor);
+  color: var(--white);
+  cursor: pointer;
+}
+
+#try-again {
+  display: none;
+}
+
+p {
+  font-family: var(--fontParagraph);
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+}
